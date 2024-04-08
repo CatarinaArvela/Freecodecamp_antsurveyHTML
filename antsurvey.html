@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Ants Survey</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ant Keeper Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+<body>
+  <div class="formatage">
+  <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+  <h1 id="title">Ants and Pets</h1>
+  <hr>
+  <h2>Survey Form</h2>
+  <p id="description"> We want to better understand the popularity of ants as pets by asking <b>YOU</b> how your ant keeping experience has been going so far. </p>
+  
+
+<!--Première partie du survey: Infos -->
+
+  <fieldset>
+    <legend>Personal Information</legend>
+
+<!--section pour le nom -->
+    <label class="info" for="name" id="name-label"> Name: <input id="name" name="first-name" class="long-input" placeholder="Enter your name" type="text" required/> 
+    </label>
+
+<!--section pour l'email -->
+<label  class="info" for="email" id="email-label" >Enter your email: <input id="email" name="email" type="email" class="long-input" placeholder="Enter your email address" required/>
+</label>
+
+<!--section pour l'age -->
+    <label  class="info" for="number" id="number-label">Your age (years): <input id="number" type="number" name="age" class="long-input" placeholder="Enter your age" min="4" max="110"/> 
+    </label>
+
+<!--section pour le sexe -->
+<div  class="info">
+  <label  for="sex-female"> Select your sex:
+     <input id="sex-female" type="radio" name="sex" value="female" class="inline" checked/> Female
+  </label>
+
+  <label for="sex-male"> <input id="sex-male" type="radio" name="sex" value="male" class="inline" /> Male 
+  </label>
+</div>
+
+<!--section pour le pays -->
+    <label for="dropdown" class="info"> Country of residence: <select id="dropdown" name="country" class="long-input">
+      <option value="">(select one)</option>
+      <option value="1">France</option>
+      <option value="2">Germany</option>
+      <option value="3">Netherlands</option>
+      <option value="4">Switzerland</option>
+      <option value="5">Spain</option>
+      <option value="6">Other</option>
+</select>
+  </fieldset>
+  
+<!--Section : Experience as an ant keeper! -->
+  <fieldset>
+    <legend>Your experience as an Ant Keeper</legend>
+
+<!--section years of experience -->
+    <label  class="info" for="years-exp">
+    How many years of experience do you have with ants? <input id="years-exp" type="number" name="years-of-experience" class="long-input" min="1" max="100"/> 
+    </label>
+
+<!--section do you buy ant colonies? -->
+    <div class="info">
+    <label  for="buy">Do you buy your ant colonies?<br>
+      <input id="buy" type="radio" name="buy-or-not" class="inline" value="buy" checked/> Yes
+    </label>
+<br>
+    <label for="not-buy"><input id="not-buy" type="radio" name="buy-or-not" class="inline" value="not-buy"/> No
+    </label>
+<br>
+    <label for="buy-somethimes"><input id="sometimes" type="radio" name="buy-or-not" class="inline" value="buy-sometimes"/> Sometimes
+    </label>
+    </div>
+
+<!--section How much per ant colonies? -->
+  <label  class="info" for="price">
+    If you do, how much do you spend for a colony?
+    <input id="price" type="text" name="years-of-experience" class="long-input" placeholder="Enter a number or 'nothing'" pattern="[0-9]+|nothing" required />
+    </label>
+  </fieldset>
+
+
+<!--Your favourit species!! -->
+  <fieldset>
+    <legend>Your favourit species</legend>
+    <!--Species you owned!! -->
+        <label for="own-sp" class="info"> Species you owned/own 
+          <select id="own-sp" name="owned-species" class="long-input">
+  <option value="">(select one)</option>
+  <option value="1">Lasius niger</option>
+  <option value="2">Solenopsis invicta</option>
+  <option value="3">Camponotus spp.</option>
+  <option value="4">Eciton spp.</option>
+  <option value="5">Paraponera clavata</option>
+  <option value="6">Atta spp.</option>
+  <option value="7">Odontomachus spp.</option>
+  <option value="8">Oecophylla spp.</option>
+  <option value="9">Monomorium pharaonis</option>
+  <option value="10">Linepithema humile</option>
+            </select>
+        </label>
+
+       <!--Species you wish to own!! -->
+        <label for="wish-sp" class="info"> Species you wish to own 
+          <select id="wish-sp" name="wish-species" class="long-input">
+  <option value="">(select one)</option>
+  <option value="1">Lasius niger</option>
+  <option value="2">Solenopsis invicta</option>
+  <option value="3">Camponotus spp.</option>
+  <option value="4">Eciton spp.</option>
+  <option value="5">Paraponera clavata</option>
+  <option value="6">Atta spp.</option>
+  <option value="7">Odontomachus spp.</option>
+  <option value="8">Oecophylla spp.</option>
+  <option value="9">Monomorium pharaonis</option>
+  <option value="10">Linepithema humile</option>
+            </select>
+        </label>
+
+        <!--Species you prefer!! -->
+        <label for="fav-sp" class="info"> Your favourit species of all time
+          <select id="fav-sp" name="fav-species" class="long-input">
+  <option value="">(select one)</option>
+  <option value="1">Lasius niger</option>
+  <option value="2">Solenopsis invicta</option>
+  <option value="3">Camponotus spp.</option>
+  <option value="4">Eciton spp.</option>
+  <option value="5">Paraponera clavata</option>
+  <option value="6">Atta spp.</option>
+  <option value="7">Odontomachus spp.</option>
+  <option value="8">Oecophylla spp.</option>
+  <option value="9">Monomorium pharaonis</option>
+  <option value="10">Linepithema humile</option>
+            </select>
+        </label>
+
+<!--Important traits -->
+<label for="trait1"><input type="checkbox" id="trait1" name="morphological-trait" value="Size"> Size</label><br>
+
+<label for="trait2"><input type="checkbox" id="trait2" name="morphological-trait" value="Color"> Color</label><br>
+
+<label for="trait3"><input type="checkbox" id="trait3" name="morphological-trait" value="Shape"> Shape</label><br>
+
+<label for="trait4"><input type="checkbox" id="trait4" name="morphological-trait" value="Leg Length"> Leg Length</label><br>
+
+<label for="trait5">
+  <input type="checkbox" id="trait5" name="morphological-trait" value="Antennae"> Antennae</label><br>
+
+
+
+<!--Any supplementary traits -->
+  <label for="supp-traits" class="info">Any traits you also would like to mention? <br>
+          <textarea class="text-input" id="bio" name="bio" rows="3" cols="30" placeholder="add traits here"></textarea>
+        </label>
+
+  </fieldset>
+  <br>
+<p>
+<input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" value="submit" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
+      <br>
+<input id="submit" class="long-input pink-button" type="submit" value="Submit" />
+</p>
+</div>
+<br>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
